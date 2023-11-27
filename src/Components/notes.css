@@ -26,7 +26,7 @@ input{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+   
     margin: auto;
     flex-wrap: wrap;
  }
@@ -49,6 +49,7 @@ word-wrap: break-word;
     list-style: none;
     margin: 10px;
     font-size: 20px;
+    height: 130px;
    
  }
  .card-container{
@@ -82,7 +83,9 @@ word-wrap: break-word;
     input{
         width: 300px;
     }
-    .card-container{
-
-    }
+    
+ }
+ #findnote{
+    width: 200px;
+    display: block;
  }

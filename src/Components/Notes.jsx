@@ -33,14 +33,13 @@ localStorage.setItem("note",JSON.stringify(item))
             item.filter(a=>a.id)
             setItem(input)
   }
-  // const searchedItem = item.filter(items=> items.toLowerCase().includes(search.toLowerCase())
-  // )
+ 
   return (
     <div className='notes'>
       <h1>Notes taking App</h1>
       <div>
 
-<input type="text" value={input} placeholder='add your notes here...' 
+<input type="text"  value={input} placeholder='add your notes here...' 
  onChange={(e)=>setInput(e.target.value)}
 
 />
@@ -50,12 +49,14 @@ localStorage.setItem("note",JSON.stringify(item))
 <div className='card-container' >
   <div className='search'> 
 
-<input type="search" placeholder='search your notes here' value={search} onChange={(e)=>setSearch(e.target.value)} />
+<input type="search" id='findnote' placeholder='search your notes here' value={search} onChange={(e)=>setSearch(e.target.value)} />
   </div>
   <div style={{display:"flex" , flexWrap:"wrap"}}> 
 
 {
-  item.map((prod,id)=>(
+  item.filter((prod)=>{
+    return search.toLowerCase()===""? prod: prod.input.toLowerCase().includes(search)
+  }).map((prod,id)=>(
     <div className='card'>
       <div className="text" >
 
