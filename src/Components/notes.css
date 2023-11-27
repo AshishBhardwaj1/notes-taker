@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
 h1{
     font-size: 2rem;
     margin: 40px;
@@ -53,13 +56,13 @@ word-wrap: break-word;
    
  }
  .card-container{
-    margin-top: 40px;
+    margin-top: 100px;
     display: flex;
-    flex-direction: column;
-  
-    margin: auto;
-    width: 80%;
-    height: 600px;
+    flex-direction: row;
+  justify-content: center;
+    
+    width: 90%;
+    height: 100vh;
     flex-wrap: wrap;
     background-color: rgb(167, 239, 241);
     overflow-y: scroll;
@@ -88,4 +91,7 @@ word-wrap: break-word;
  #findnote{
     width: 200px;
     display: block;
+ }
+ .search{
+    margin-top: 50px;
  }

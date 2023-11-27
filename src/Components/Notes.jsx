@@ -39,18 +39,16 @@ localStorage.setItem("note",JSON.stringify(item))
       <h1>Notes taking App</h1>
       <div>
 
-<input type="text"  value={input} placeholder='add your notes here...' 
- onChange={(e)=>setInput(e.target.value)}
+        <input type="text"  value={input} placeholder='add your notes here...' 
+         onChange={(e)=>setInput(e.target.value)}/>
 
-/>
-<button className='btn' onClick={addNote}>add note</button>
+            <button className='btn' onClick={addNote}>add note</button>
       </div>
       
-<div className='card-container' >
-  <div className='search'> 
-
-<input type="search" id='findnote' placeholder='search your notes here' value={search} onChange={(e)=>setSearch(e.target.value)} />
+   <div className='search'> 
+      <input type="search" id='findnote' placeholder='search your notes here' value={search} onChange={(e)=>setSearch(e.target.value)} />
   </div>
+<div className='card-container' >
   <div style={{display:"flex" , flexWrap:"wrap"}}> 
 
 {
