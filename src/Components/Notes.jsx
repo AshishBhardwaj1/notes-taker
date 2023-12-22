@@ -12,6 +12,8 @@ const getItems =()=>{
 }
 let id=0;
 const Notes = () => {
+  // const [currentTodo ,setCurrentTodo] =useState({})
+  // const [edit,setEdit] =useState(false)
   const [input,setInput] =useState('')
   const [item ,setItem] =useState(getItems())
   const [search,setSearch] =useState("")
@@ -29,13 +31,16 @@ localStorage.setItem("note",JSON.stringify(item))
         setInput('')
     }
   }
-  const editTodo =(item)=>{
-            item.filter(a=>a.id)
-            setItem(input)
-  }
+  // const editTodo =(prod,id)=>{
+  //          setEdit(true)}
+  
  
   return (
+    
     <div className='notes'>
+       <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
       <h1>Notes taking App</h1>
       <div>
 
@@ -64,7 +69,7 @@ localStorage.setItem("note",JSON.stringify(item))
     <div style={{position:"absolute",bottom:"10px"}}>
 
      <button className='card-btn'  onClick={()=>setItem(item.filter(a=> a.id !== prod.id))}>delete</button>
-     <button className='card-btn' onClick={editTodo}>edit</button>
+     <button className='card-btn'>edit</button>
     </div>
     </div>
   ))

@@ -24,6 +24,7 @@ input{
    background-color: rgb(246, 53, 91);
    border-radius: 10px;
    color: white;
+    cursor: pointer;
  }
  .notes{
     display: flex;
@@ -40,7 +41,7 @@ word-wrap: break-word;
  flex-direction: column;
     height: 200px;
     width: 200px;
-    background-color: rgb(243, 203, 188);
+    background-color: rgba(233,0,56,  0.3);
     border-bottom-right-radius: 10px;
     margin: 10px;
     box-shadow: 2px 2px  rgb(77, 31, 31) ;
@@ -59,7 +60,7 @@ word-wrap: break-word;
     margin-top: 100px;
     display: flex;
     flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
     
     width: 90%;
     height: 100vh;
@@ -75,6 +76,7 @@ word-wrap: break-word;
      padding: 5px;
      margin: 5px;
      border-radius: 10px;
+     cursor: pointer;
    
 
  }
