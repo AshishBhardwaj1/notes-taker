@@ -3,16 +3,15 @@ import {CiSearch} from "react-icons/ci"
 import { Link } from 'react-router-dom'
 import {BsPlusLg} from "react-icons/bs"
 import NoteItem from './NoteItem'
-const Note = ({notes}) => {
+const Note = ({notes }) => {
     const [text, setText] = useState("")
     const [filtered,setFiltered] =useState(notes)
 
     const search = ()=>{
-      // setFiltered(notes.filter(note=>{
-      //   if (note.title.toLowerCase().match(text.toLowerCase())) {
-      //     return notes;
-      //   }
-      // }))
+      const filteredItem = notes.filter((note)=>
+      note.title.toLowerCase().includes(text.toLowerCase())
+      )
+      setFiltered(filteredItem)
     }
   return (
     <div>
@@ -29,7 +28,7 @@ const Note = ({notes}) => {
         </button>
       </header>
       <div className="notes-container">
-        {notes.map((note) => (
+        {filtered.map((note) => (
           <NoteItem key={note.id} note={note} />
         ))}
       </div>
