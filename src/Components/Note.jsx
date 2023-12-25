@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import "./note.css"
 import {CiSearch} from "react-icons/ci"
 import { Link } from 'react-router-dom'
 import {BsPlusLg} from "react-icons/bs"
@@ -7,32 +8,48 @@ const Note = ({notes }) => {
     const [text, setText] = useState("")
     const [filtered,setFiltered] =useState(notes)
 
-    const search = ()=>{
-      const filteredItem = notes.filter((note)=>
-      note.title.toLowerCase().includes(text.toLowerCase())
-      )
-      setFiltered(filteredItem)
-    }
+    // const search = ()=>{
+    //   const filtered = notes.filter((note)=>  {
+
+    //   return  text.toLowerCase()===""? note: note.title.toLowerCase().includes(text)
+    //   }
+      
+    //   )
+    //   setFiltered(filtered)
+
+    // }
   return (
-    <div>
-         <header>
-           <h2>Notes</h2>
-               <input
+    <div className='note'>
+         <header className='heading' style={{display:"flex" ,justifyContent:"space-between ",padding:"10px"}} >
+          <div >
+
+            <h2 > My Notes</h2>
+          </div>
+          <div className='search'>
+
+               <input className='search-note'
                   type="text"
                   onChange={(e) => setText(e.target.value)}
                    placeholder="search your notes here..."
                    value={text}
                />
-        <button onClick={search()}>
-          <CiSearch />{" "}
+        <button className='search-btn' >
+          <CiSearch  />{" "}
         </button>
+          </div>
       </header>
-      <div className="notes-container">
-        {filtered.map((note) => (
+      <div >
+        <div className='notes'>
+
+        {notes.filter((note)=>{
+          return text.toLowerCase()===""? note: note.title.toLowerCase().includes(text)
+        }).map((note) => (
           <NoteItem key={note.id} note={note} />
-        ))}
+          ))}
+          </div>
       </div>
-      <Link to="/create">
+     
+      <Link to="/create" className='add-note'>
         {" "}
         <BsPlusLg />{" "}
       </Link>

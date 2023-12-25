@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useParams ,useNavigate } from 'react-router-dom'
 import  {IoIosArrowBack} from "react-icons/io"
 import useCreateDate from './useCreateDate';
+import "./editnote.css"
 const EditNotes = ({notes,setNotes}) => {
   const {id} = useParams();
   console.log(id);
@@ -35,18 +36,21 @@ const handleDel =() =>{
 
 }
   return (
-    <div>
+    <div className='edit-note'>
 
 
-<header> 
-<Link to="/"> <IoIosArrowBack/> </Link>
+<header className='heading'> 
+<Link to="/"> <IoIosArrowBack  style={{fontSize:"30px", color:"white", marginTop:"20px",marginLeft:"20px",backgroundColor:"transparent"}}/> </Link>
 
 
-        </header>
+        </header >
         <form onSubmit={handlesub}>
-       <button>save</button>
-          <button onClick={handleDel}>delete</button>
-            <input type="text" value={title} onChange={(e)=>setTitle(e.target.value)}/>
+          <div className='btn'>
+
+       <button className='save' >save</button>
+          <button className='del-btn' onClick={handleDel}>delete</button>
+          </div>
+            <input className='input-title' type="text" value={title} onChange={(e)=>setTitle(e.target.value)}/>
             <textarea  cols="30" rows="10" value={details}  onChange={(e)=>setDetails(e.target.value)}></textarea>
         </form>
     </div>

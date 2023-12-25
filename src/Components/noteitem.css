@@ -1,0 +1,32 @@
+.date{
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    border-bottom: 1px solid rgb(245, 10, 10);
+}
+.details{
+    font-size: 20px;
+word-wrap: break-word;
+overflow:hidden;
+
+}
+.note-title{
+    white-space: nowrap;
+    font-size:2rem;
+    overflow: hidden;
+text-overflow: ellipsis;
+}
+.Note-items{
+    display: flex;
+}
+.note-item{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(8, 8, 8);
+    text-decoration: none;
+    margin: 20px;
+    background-color: rgb(227, 242, 139);
+}

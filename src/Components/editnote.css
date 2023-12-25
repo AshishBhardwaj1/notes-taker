@@ -1,0 +1,45 @@
+.btn{
+    position:absolute;
+z-index: 4;
+ top:0;
+ right:0;
+ align-items: center;
+ margin-top: 10px;
+ margin-right: 20px;
+}
+.del-btn{
+    top:0;
+ right:0; 
+ background-color: rgb(241, 66, 101);
+ padding: 10px;
+ font-size: large;
+ font-weight: 400;
+ border-radius: 15px;
+ color: white;
+ position: absolute;
+
+}
+.edit-note{
+width: 100%;
+height:  100VH;
+background-color: black;
+overflow: hidden;
+}
+.save{
+    top:0;
+    right:100px; 
+    background-color: rgb(57, 234, 99);
+    padding: 10px;
+    font-size: large;
+    font-weight: 400;
+    border-radius: 15px;
+    color: white;
+    position: absolute;
+}
+form{
+    margin-top: 70px;
+    z-index: -1;
+}
+input::placeholder{
+    font-size: 15px;
+}
