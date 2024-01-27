@@ -2,7 +2,7 @@
     font-size: 12px;
     position: absolute;
     bottom: 10px;
-    border-bottom: 1px solid rgb(245, 10, 10);
+    border-bottom: 1px solid rgb(18, 10, 245);
 }
 .details{
     font-size: 20px;
@@ -29,4 +29,8 @@ text-overflow: ellipsis;
     text-decoration: none;
     margin: 20px;
     background-color: rgb(227, 242, 139);
+   
+}
+.note-item:hover{
+    box-shadow: 0 8px 10px 0 rgba(255, 255, 254, 0.2), 0 8px 20px 0 rgba(254, 254, 254, 0.19);
 }

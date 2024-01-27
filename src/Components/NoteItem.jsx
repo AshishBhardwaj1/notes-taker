@@ -10,7 +10,7 @@ const NoteItem = ({note}) => {
 
 {/* <h4>{ note.title.length >10 ? (note.title.substr(0,10))+"...":note.title}</h4> */}
 <h4 className='note-title'>{note.title} </h4>
-<p className='details'> {note.details.length>80? (note.details.substr(0,80))+"...":note.details} </p>
+<p className='details'> {note.details.length>70? (note.details.substr(0,70))+"...":note.details} </p>
 <p className='date'>{note.date}</p>
 </Link>
     </div>
