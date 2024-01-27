@@ -1,5 +1,6 @@
 {
   "name": "new-vite",
+  "homepage" : "https://AshishBhardwaj1.github.io/notes-taker/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
